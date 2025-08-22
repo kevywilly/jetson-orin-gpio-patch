@@ -10,6 +10,22 @@ sudo cp pin7_as_gpio.dtbo /boot
 sudo /opt/nvidia/jetson-io/jetson-io.py
 ```
 
+## Make pins 7, 12, 32, 33 GPIO Bidirectional
+
+```bash
+dtc -O dtb -o pin7_12_32_33_as_gpio.dtbo pin7_12_32_33_as_gpio.dts
+sudo cp pin7_12_32_33_as_gpio.dtbo /boot
+sudo /opt/nvidia/jetson-io/jetson-io.py
+```
+
+## Make pins 32, 33 GPIO Bidirectional
+
+```bash
+dtc -O dtb -o pin32_33_as_gpio.dtbo pin32_33_as_gpio.dts
+sudo cp pin32_33_as_gpio.dtbo /boot
+sudo /opt/nvidia/jetson-io/jetson-io.py
+```
+
 ## Test examples
 You will need to reboot for the changes to take effect. There are sample programs taken from the Jetson.GPIO library in the examples directory, which use Pin 7 as an output and Pin 15 as in input.
 
